@@ -24,44 +24,6 @@ body{
     border-radius: 5px;
 }
 
-.con-after{
-    opacity: 0.3;
-}
-
-h1{
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin-top: 240px;
-    font-size: 50px;
-}
-.h1{
-    animation: come 1s 1 linear;
-    opacity: 1;
-}
-@keyframes come {
-    0%{
-        opacity: 0 ;
-    }
-    20%{
-        opacity: 0.2 ;
-    }
-    40%{
-        opacity: 0.4 ;
-    }
-    60%{
-        opacity: 0.6 ;
-    }
-    80%{
-        opacity: 0.8 ;
-    }
-    100%{
-        opacity: 1 ;
-    }
-    
-}
-
 hr{
     position: absolute;
     width:90%;
@@ -195,10 +157,6 @@ hr{
     hr{
         height: 1.1vh;
     }
-    h1{
-        font-size: 35px;
-        margin-top: 185px;
-    }
     .result{
         margin-top: 20px;
     }
@@ -214,10 +172,10 @@ hr{
     }
     
     .hr-x-2, .hr-diag-1, .hr-diag-2{
-        margin-top: 149px;
+        margin-top: 155px;
     }
     .hr-x-3{
-        margin-top: 255px;
+        margin-top: 270px;
     }
     .hr-y-1, .hr-y-2, .hr-y-3{
         transform: rotate(90deg);

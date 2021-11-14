@@ -1,7 +1,8 @@
 let id = (id) => document.getElementById(id);
 
 let doc = document.getElementById("root");
-let game_res = id("game-res")
+let title = document.querySelector(".result")
+
 
 let box_1 = id("box-1");
 let box_2 = id("box-2");
@@ -89,7 +90,7 @@ function write_1(){
         hr_x_1.classList.add("res");
         root.appendChild(hr_x_1);
         gameover()
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_1 == box_x_4 && box_x_1 == box_x_7)
@@ -97,7 +98,7 @@ function write_1(){
         hr_y_1.classList.add("res");
         root.appendChild(hr_y_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_1 == box_x_5 && box_x_1 == box_x_9)
@@ -105,7 +106,7 @@ function write_1(){
         hr_diag_1.classList.add("res");
         root.appendChild(hr_diag_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
 
@@ -148,7 +149,7 @@ function write_2(){
         hr_x_1.classList.add("res");
         root.appendChild(hr_x_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_2 == box_x_5 && box_x_2 == box_x_8)
@@ -156,7 +157,7 @@ function write_2(){
         hr_y_2.classList.add("res");
         root.appendChild(hr_y_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     
@@ -199,7 +200,7 @@ function write_3(){
         hr_x_1.classList.add("res");
         root.appendChild(hr_x_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_3 == box_x_6 && box_x_3 == box_x_9)
@@ -207,7 +208,7 @@ function write_3(){
         hr_y_3.classList.add("res");
         root.appendChild(hr_y_3);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_3 == box_x_5 && box_x_3 == box_x_7)
@@ -215,7 +216,7 @@ function write_3(){
         hr_diag_2.classList.add("res");
         root.appendChild(hr_diag_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
 }
@@ -257,7 +258,7 @@ function write_4(){
         hr_y_1.classList.add("res");
         root.appendChild(hr_y_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_4 == box_x_5 && box_x_4 == box_x_6)
@@ -265,7 +266,7 @@ function write_4(){
         hr_x_2.classList.add("res");
         root.appendChild(hr_x_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
 }
@@ -307,7 +308,7 @@ function write_5(){
         hr_diag_1.classList.add("res");
         root.appendChild(hr_diag_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_5 == box_x_2 && box_x_5 == box_x_8)
@@ -315,7 +316,7 @@ function write_5(){
         hr_y_2.classList.add("res");
         root.appendChild(hr_y_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_5 == box_x_3 && box_x_5 == box_x_7)
@@ -323,7 +324,7 @@ function write_5(){
         hr_diag_2.classList.add("res");
         root.appendChild(hr_diag_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_5 == box_x_4 && box_x_5 == box_x_6)
@@ -331,7 +332,7 @@ function write_5(){
         hr_x_2.classList.add("res");
         root.appendChild(hr_x_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
 }
@@ -373,7 +374,7 @@ function write_6(){
         hr_y_3.classList.add("res");
         root.appendChild(hr_y_3);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_6 == box_x_5 && box_x_6 == box_x_4)
@@ -381,7 +382,7 @@ function write_6(){
         hr_x_2.classList.add("res");
         root.appendChild(hr_x_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
 }
@@ -423,7 +424,7 @@ function write_7(){
         hr_y_1.classList.add("res");
         root.appendChild(hr_y_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_7 == box_x_5 && box_x_7 == box_x_3)
@@ -431,7 +432,7 @@ function write_7(){
         hr_diag_2.classList.add("res");
         root.appendChild(hr_diag_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_7 == box_x_8 && box_x_7 == box_x_9)
@@ -439,7 +440,7 @@ function write_7(){
         hr_x_3.classList.add("res");
         root.appendChild(hr_x_3);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
 }
@@ -481,7 +482,7 @@ function write_8(){
         hr_y_2.classList.add("res");
         root.appendChild(hr_y_2);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_8 == box_x_7 && box_x_8 == box_x_9)
@@ -489,7 +490,7 @@ function write_8(){
         hr_x_3.classList.add("res");
         root.appendChild(hr_x_3);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     
@@ -532,7 +533,7 @@ function write_9(){
         hr_y_3.classList.add("res");
         root.appendChild(hr_y_3);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_9 == box_x_8 && box_x_9 == box_x_7)
@@ -540,7 +541,7 @@ function write_9(){
         hr_x_3.classList.add("res");
         root.appendChild(hr_x_3);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
     else if(box_x_9 == box_x_5 && box_x_9 == box_x_1)
@@ -548,7 +549,7 @@ function write_9(){
         hr_diag_1.classList.add("res");
         root.appendChild(hr_diag_1);
         gameover();
-        end();
+        title.innerHTML = "Game over!"
         remove();
     }
 }
@@ -561,12 +562,6 @@ function click_play(){
 function gameover(){
     let game_over = new Audio("./game_over.wav");
     game_over.play();
-}
-
-function end()
-{
-    game_res.classList.add("h1")
-    root.classList.add("con-after")
 }
 
 function remove(){
