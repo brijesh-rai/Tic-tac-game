@@ -147,7 +147,7 @@ hr{
     }
 }
 
-@media screen and (max-width:540px)
+@media screen and (max-width:480px)
 {
     .container{
         width: 90%;
@@ -172,7 +172,7 @@ hr{
     }
     
     .hr-x-2, .hr-diag-1, .hr-diag-2{
-        margin-top: 170px;
+        margin-top: 190px;
     }
     .hr-x-3{
         margin-top: 259px;
