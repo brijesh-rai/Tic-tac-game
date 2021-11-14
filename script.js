@@ -1,5 +1,7 @@
 let id = (id) => document.getElementById(id);
 
+let doc = document.getElementById("root");
+
 let box_1 = id("box-1");
 let box_2 = id("box-2");
 let box_3 = id("box-3");
@@ -21,6 +23,7 @@ box_7.addEventListener("click",write_7);
 box_8.addEventListener("click",write_8);
 box_9.addEventListener("click",write_9);
 
+
 let arr = ["X","O"];
 function random(min,max)
 {
@@ -29,24 +32,79 @@ function random(min,max)
 
 let val = random(0,1);
 
+    let hr_x_1 = document.createElement("hr");
+    hr_x_1.classList.add("hr-x-1")
+    let hr_x_2 = document.createElement("hr");
+    hr_x_2.classList.add("hr-x-2")
+    let hr_x_3 = document.createElement("hr");
+    hr_x_3.classList.add("hr-x-3")
+    let hr_y_1 = document.createElement("hr");
+    hr_y_1.classList.add("hr-y-1")
+    let hr_y_2 = document.createElement("hr");
+    hr_y_2.classList.add("hr-y-2")
+    let hr_y_3 = document.createElement("hr");
+    hr_y_3.classList.add("hr-y-3")
+    let hr_diag_1 = document.createElement("hr");
+    hr_diag_1.classList.add("hr-diag-1")
+    let hr_diag_2 = document.createElement("hr");
+    hr_diag_2.classList.add("hr-diag-2")
+
+
+
 function write_1(){
     let len = box_1.innerHTML.length;
 
     if(len == 0 && prev == "")
     {
         box_1.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
     else if(len == 0 && prev == "O")
     {
         box_1.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_1.innerHTML = "O";
+        click_play();
         prev = "O";
     }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_1 == box_x_2 && box_x_1 == box_x_3)
+    {
+        hr_x_1.classList.add("res");
+        root.appendChild(hr_x_1);
+        gameover();
+        remove();
+    }
+    else if(box_x_1 == box_x_4 && box_x_1 == box_x_7)
+    {
+        hr_y_1.classList.add("res");
+        root.appendChild(hr_y_1);
+        gameover();
+        remove();
+    }
+    else if(box_x_1 == box_x_5 && box_x_1 == box_x_9)
+    {
+        hr_diag_1.classList.add("res");
+        root.appendChild(hr_diag_1);
+        gameover();
+        remove();
+    }
+
 }
 
 function write_2(){
@@ -55,17 +113,45 @@ function write_2(){
     if(len == 0 && prev == "")
     {
         box_2.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
     else if(len == 0 && prev == "O")
     {
         box_2.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_2.innerHTML = "O";
+        click_play();
         prev = "O";
+    }
+    
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_2 == box_x_1 && box_x_2 == box_x_3)
+    {
+        hr_x_1.classList.add("res");
+        root.appendChild(hr_x_1);
+        gameover();
+        remove();
+    }
+    else if(box_x_2 == box_x_5 && box_x_2 == box_x_8)
+    {
+        hr_y_2.classList.add("res");
+        root.appendChild(hr_y_2);
+        gameover();
+        remove();
     }
     
 }
@@ -76,17 +162,52 @@ function write_3(){
     if(len == 0 && prev == "")
     {
         box_3.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
     else if(len == 0 && prev == "O")
     {
         box_3.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_3.innerHTML = "O";
+        click_play();
         prev = "O";
+    }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_3 == box_x_2 && box_x_3 == box_x_1)
+    {
+        hr_x_1.classList.add("res");
+        root.appendChild(hr_x_1);
+        gameover();
+        remove();
+    }
+    else if(box_x_3 == box_x_6 && box_x_3 == box_x_9)
+    {
+        hr_y_3.classList.add("res");
+        root.appendChild(hr_y_3);
+        gameover();
+        remove();
+    }
+    else if(box_x_3 == box_x_5 && box_x_3 == box_x_7)
+    {
+        hr_diag_2.classList.add("res");
+        root.appendChild(hr_diag_2);
+        gameover();
+        remove();
     }
 }
 
@@ -96,17 +217,45 @@ function write_4(){
     if(len == 0 && prev == "")
     {
         box_4.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
-    if(len == 0 && prev == "O")
+    else if(len == 0 && prev == "O")
     {
         box_4.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_4.innerHTML = "O";
+        click_play();
         prev = "O";
+    }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_4 == box_x_1 && box_x_4 == box_x_7)
+    {
+        hr_y_1.classList.add("res");
+        root.appendChild(hr_y_1);
+        gameover();
+        remove();
+    }
+    else if(box_x_4 == box_x_5 && box_x_4 == box_x_6)
+    {
+        hr_x_2.classList.add("res");
+        root.appendChild(hr_x_2);
+        gameover();
+        remove();
     }
 }
 
@@ -116,17 +265,59 @@ function write_5(){
     if(len == 0 && prev == "")
     {
         box_5.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
-    if(len == 0 && prev == "O")
+    else if(len == 0 && prev == "O")
     {
         box_5.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_5.innerHTML = "O";
+        click_play();
         prev = "O";
+    }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_5 == box_x_1 && box_x_5 == box_x_9)
+    {
+        hr_diag_1.classList.add("res");
+        root.appendChild(hr_diag_1);
+        gameover();
+        remove();
+    }
+    else if(box_x_5 == box_x_2 && box_x_5 == box_x_8)
+    {
+        hr_y_2.classList.add("res");
+        root.appendChild(hr_y_2);
+        gameover();
+        remove();
+    }
+    else if(box_x_5 == box_x_3 && box_x_5 == box_x_7)
+    {
+        hr_diag_2.classList.add("res");
+        root.appendChild(hr_diag_2);
+        gameover();
+        remove();
+    }
+    else if(box_x_5 == box_x_4 && box_x_5 == box_x_6)
+    {
+        hr_x_2.classList.add("res");
+        root.appendChild(hr_x_2);
+        gameover();
+        remove();
     }
 }
 
@@ -136,17 +327,45 @@ function write_6(){
     if(len == 0 && prev == "")
     {
         box_6.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
-    if(len == 0 && prev == "O")
+    else if(len == 0 && prev == "O")
     {
         box_6.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_6.innerHTML = "O";
+        click_play();
         prev = "O";
+    }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_6 == box_x_3 && box_x_6 == box_x_9)
+    {
+        hr_y_3.classList.add("res");
+        root.appendChild(hr_y_3);
+        gameover();
+        remove();
+    }
+    else if(box_x_6 == box_x_5 && box_x_6 == box_x_4)
+    {
+        hr_x_2.classList.add("res");
+        root.appendChild(hr_x_2);
+        gameover();
+        remove();
     }
 }
 
@@ -156,17 +375,52 @@ function write_7(){
     if(len == 0 && prev == "")
     {
         box_7.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
-    if(len == 0 && prev == "O")
+    else if(len == 0 && prev == "O")
     {
         box_7.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_7.innerHTML = "O";
+        click_play();
         prev = "O";
+    }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_7 == box_x_4 && box_x_7 == box_x_1)
+    {
+        hr_y_1.classList.add("res");
+        root.appendChild(hr_y_1);
+        gameover();
+        remove();
+    }
+    else if(box_x_7 == box_x_5 && box_x_7 == box_x_3)
+    {
+        hr_diag_2.classList.add("res");
+        root.appendChild(hr_diag_2);
+        gameover();
+        remove();
+    }
+    else if(box_x_7 == box_x_8 && box_x_7 == box_x_9)
+    {
+        hr_x_3.classList.add("res");
+        root.appendChild(hr_x_3);
+        gameover();
+        remove();
     }
 }
 
@@ -176,18 +430,47 @@ function write_8(){
     if(len == 0 && prev == "")
     {
         box_8.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
-    if(len == 0 && prev == "O")
+    else if(len == 0 && prev == "O")
     {
         box_8.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_8.innerHTML = "O";
+        click_play();
         prev = "O";
     }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_8 == box_x_5 && box_x_8 == box_x_2)
+    {
+        hr_y_2.classList.add("res");
+        root.appendChild(hr_y_2);
+        gameover();
+        remove();
+    }
+    else if(box_x_8 == box_x_7 && box_x_8 == box_x_9)
+    {
+        hr_x_3.classList.add("res");
+        root.appendChild(hr_x_3);
+        gameover();
+        remove();
+    }
+    
 }
 
 function write_9(){
@@ -196,16 +479,73 @@ function write_9(){
     if(len == 0 && prev == "")
     {
         box_9.innerHTML = arr[val];
+        click_play();
         prev = arr[val];
     }
-    if(len == 0 && prev == "O")
+    else if(len == 0 && prev == "O")
     {
         box_9.innerHTML = "X";
+        click_play();
         prev = "X";
     }
     else if(len == 0 && prev == "X")
     {
         box_9.innerHTML = "O";
+        click_play();
         prev = "O";
     }
+
+    let box_x_1 = box_1.innerHTML;
+    let box_x_2 = box_2.innerHTML;
+    let box_x_3 = box_3.innerHTML;
+    let box_x_4 = box_4.innerHTML;
+    let box_x_5 = box_5.innerHTML;
+    let box_x_6 = box_6.innerHTML;
+    let box_x_7 = box_7.innerHTML;
+    let box_x_8 = box_8.innerHTML;
+    let box_x_9 = box_9.innerHTML;
+
+    if(box_x_9 == box_x_6 && box_x_9 == box_x_3)
+    {
+        hr_y_3.classList.add("res");
+        root.appendChild(hr_y_3);
+        gameover();
+        remove();
+    }
+    else if(box_x_9 == box_x_8 && box_x_9 == box_x_7)
+    {
+        hr_x_3.classList.add("res");
+        root.appendChild(hr_x_3);
+        gameover();
+        remove();
+    }
+    else if(box_x_9 == box_x_5 && box_x_9 == box_x_1)
+    {
+        hr_diag_1.classList.add("res");
+        root.appendChild(hr_diag_1);
+        gameover();
+        remove();
+    }
+}
+
+function click_play(){
+    let click = new Audio("./click.wav");
+    click.play();
+}
+
+function gameover(){
+    let game_over = new Audio("./game_over.wav");
+    game_over.play();
+}
+
+function remove(){
+    box_1.removeEventListener("click",write_1);
+    box_2.removeEventListener("click",write_2);
+    box_3.removeEventListener("click",write_3);
+    box_4.removeEventListener("click",write_4);
+    box_5.removeEventListener("click",write_5);
+    box_6.removeEventListener("click",write_6);
+    box_7.removeEventListener("click",write_7);
+    box_8.removeEventListener("click",write_8);
+    box_9.removeEventListener("click",write_9);
 }
