@@ -87,6 +87,27 @@ hr{
     border-top: none;
     border-left: none;
 }
+
+@keyframes fliker {
+    0%{
+        background-color: rgba(255,0, 0, 0);
+    }
+    20%{
+        background-color: rgba(255,0, 0, 0.2);
+    }
+    40%{
+        background-color: rgba(255,0, 0, 0.4);
+    }
+    60%{
+        background-color: rgba(255,0, 0, 0.6);
+    }
+    80%{
+        background-color: rgba(255,0, 0, 0.8);
+    }
+    100%{
+        background-color: rgba(255,0, 0, 1);
+    }
+}
 #box-2{
     border-top: none;
 }
